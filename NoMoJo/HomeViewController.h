@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  HomeViewController.h
 //  NoMoJo
 //
 //  Created by Zach Whelchel on 7/15/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface HomeViewController : UIViewController
 
 @end
-
