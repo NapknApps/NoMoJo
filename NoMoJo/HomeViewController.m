@@ -59,6 +59,10 @@
 {
     [super viewDidAppear:animated];
     
+    
+    //[[FirebaseHelper baseFirebaseReference] unauth];
+    
+    
     if (![DefaultsHelper introShown]) {
         [self performSegueWithIdentifier:@"Intro" sender:self];
     }

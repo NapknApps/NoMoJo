@@ -18,6 +18,9 @@
 + (BOOL)userIsLoggedIn
 {
     Firebase *ref = [self baseFirebaseReference];
+    
+    NSLog(@"Auth %@", ref.authData);
+    
     return ref.authData == nil ? NO : YES;
 }
 

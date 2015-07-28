@@ -41,6 +41,8 @@
         [ref createUser:self.emailTextField.text password:self.passwordTextField.text withValueCompletionBlock:^(NSError *error, NSDictionary *result) {
             if (error) {
                 
+                NSLog(@"%@", error);
+                
                 UIAlertController *alertController = [UIAlertController
                                                       alertControllerWithTitle:@"Error"
                                                       message:@"There was an error while creating your account."
@@ -58,7 +60,32 @@
                 [self presentViewController:alertController animated:YES completion:nil];
 
             } else {
-                [self.delegate signUpViewControllerDidLogin:self];
+                
+                Firebase *ref = [FirebaseHelper baseFirebaseReference];
+                [ref authUser:self.emailTextField.text password:self.passwordTextField.text withCompletionBlock:^(NSError *error, FAuthData *authData) {
+                    if (error) {
+                        
+                        UIAlertController *alertController = [UIAlertController
+                                                              alertControllerWithTitle:@"Error"
+                                                              message:@"There was an error while creating your account."
+                                                              preferredStyle:UIAlertControllerStyleAlert];
+                        
+                        UIAlertAction *cancelAction = [UIAlertAction
+                                                       actionWithTitle:@"OK"
+                                                       style:UIAlertActionStyleCancel
+                                                       handler:^(UIAlertAction *action)
+                                                       {
+                                                           
+                                                       }];
+                        
+                        [alertController addAction:cancelAction];
+                        [self presentViewController:alertController animated:YES completion:nil];
+                        
+                    } else {
+                        [self.delegate signUpViewControllerDidLogin:self];
+                    }
+                }];
+                
             }
         }];
     }

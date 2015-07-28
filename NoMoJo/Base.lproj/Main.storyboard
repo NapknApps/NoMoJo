@@ -28,7 +28,7 @@
         <!--Navigation Controller-->
         <scene sceneID="wP5-XL-Oar">
             <objects>
-                <navigationController navigationBarHidden="YES" id="SZl-Hm-SlA" sceneMemberID="viewController">
+                <navigationController id="SZl-Hm-SlA" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="dGg-Pq-i3a"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VaI-YD-opd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -114,6 +114,30 @@
                                 <rect key="frame" x="100" y="100" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bUB-DO-Hvv">
+                                <rect key="frame" x="0.0" y="310" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="G6g-ci-Keo" kind="push" identifier="LogIn" id="Mt2-G0-Dtl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fST-vv-1u6">
+                                <rect key="frame" x="0.0" y="370" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="pFJ-bX-0du" kind="push" identifier="SignUp" id="nLW-5S-aax"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.37254901959999998" green="0.7843137255" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -144,7 +168,7 @@
                                 <rect key="frame" x="10" y="150" width="300" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZZy-m2-Mrr">
                                 <rect key="frame" x="0.0" y="210" width="320" height="58"/>
@@ -190,7 +214,7 @@
                                 <rect key="frame" x="10" y="150" width="300" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2EA-mM-F7o">
                                 <rect key="frame" x="0.0" y="210" width="320" height="58"/>
